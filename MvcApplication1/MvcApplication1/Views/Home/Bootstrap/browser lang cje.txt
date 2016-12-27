@@ -1,0 +1,22 @@
+browser lang cje
+in javascript auto identify datatypes
+function can reuse
+a &b are fn parameters- function sum(a,b)
+2 types scripting:differed script,immediate script(w/o button)
+function name is used for event handling
+var a-scope of a is local to that fn
+innerHTML is used in p,label tags
+Javascript is object based,action-oriented,case-sensitive.a semi-colon ends js.scopeof variable.parameters
+
+
+
+topics---
+scripting lang,uses,diff b/w prog lang and scr lang,types of scr lan(client and server side)
+deffered mode scr and immediate mode scr lang with code
+
+
+in scripting lang compiler and interpreter are executed and installed in server side not in client side.
+if(/^[a-zA-Z]^$/) used for character check
+
+
+new git pw: razeen@81

@@ -1,0 +1,213 @@
+
+<html>
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script src="jquery-3.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/face_script.js"></script>
+	<style type="text/css">
+	#user{
+		color: white;
+		font-size: smaller;
+	}
+	#pass{
+		color: white;
+		font-size: smaller;
+	}
+	#fn{
+		color: white;
+		font-size: smaller;
+	}
+	#ln{
+		color:white;
+		font-size: smaller;
+	}
+	.frow {
+		height: 15%;
+		background-color: 4867aa;
+	}
+	header{
+		background-color: 4867aa;
+		height: 16%;
+	}
+	.s {
+		background-color: #EBEDEF;
+		
+	}
+	.m{
+		margin-top: 10px;
+		margin-right: -20px;
+
+	}
+	#why{
+		margin-left: 200px;
+		margin-top: -40px;
+	}
+	.usererror{
+		border: 1px solid #be4b49;
+		background-color: #be4b49;
+		position: absolute;
+		//top: 0;
+		//bottom: 0;
+		//right: 0;
+		//left: 0;
+		padding-bottom: 5px;
+
+	}
+	.first{
+		margin-left: 100px;
+		background-color: #be4b49;
+		position: absolute;
+	}
+	.last{
+		margin-left: 250px;
+		background-color: #be4b49;
+		position: absolute;
+	}
+	.password{
+		border: 1px solid #be4b49;
+		background-color: #be4b49;
+		padding-top: -5px;
+		position: absolute;
+	}
+	.tooltip {
+    background-color:#000;
+    border:1px solid #fff;
+    padding:10px 15px;
+    width:200px;
+    display:none;
+    color:#fff;
+    text-align:left;
+    font-size:12px;
+ 
+    /* outline radius for mozilla/firefox only */
+    -moz-box-shadow:0 0 10px #000;
+    -webkit-box-shadow:0 0 10px #000;
+	}
+	#lab1
+	{
+	color: red;
+	float: right;
+	font-size: xx-small;
+	}
+	#lab2
+	{
+	color: red;
+	float: right;
+	margin-right: -30px;
+	font-size: xx-small;
+
+	}
+	</style>
+	<script type="text/javascript">
+	</script>
+</head>
+<body bgcolor="f3f4f9">
+	<header>
+	<form name="myform" action="#">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-0">
+				<img src="facebook.jpg" width="35%" height="95%" style="margin-top:%;margin-left:20%;" align="center">
+			</div>
+			<div class="col-md-6 hidden-xs hidden-sm">
+				<div class="col-md-4" style="margin-top:3%;">
+					<font style="color:white;font-size:12px;">Email or Phone</font><br>
+					<a href="#" data-toggle="tooltip" title="mail">
+					<input type="text" id="username"></a><br>	
+					<div class="usererror">
+		
+						<label id="user"></label>
+					</div>
+				</div>
+				<div class="col-md-4 hidden-xs hidden-sm" style="margin-top:3%;">
+					<font style="color:white;font-size:12px;">Password  </font><br> 
+					<input type="password" id="password" title="password"><br>
+					<div class="password">
+						<label id="pass"></label>
+					</div>
+					<a href="https://www.google.co.in/?gfe_rd=cr&ei=VcMiWNeVBaz98wfa4KaIDQ&gws_rd=ssl"><p><font style="color:lightblue;font-size:12px;">Forgotten account?</font></a>
+				</div>
+				<div class="col-md-4 hidden-xs hidden-sm" style="margin-top:6%">
+					<input type="submit" style="background-color:#1F618D;color:white;border-radius:2px;border:1px solid;border-color:darkblue" submit value="Log In" id="bt-log">
+				</div>
+				<div class="col-sm-12 col-md-offset-0 col-xs-12 hidden-md hidden-lg">
+					<img src="facebook.jpg" width="35%" height="85%" style="margin-top:-10%;margin-left:20%;" align="center">
+				</div>
+			</div>
+		</div>
+	</div>
+	</form>
+	</header>
+	
+	<form name="myform" action="#">
+	<div class="container-fluid s">
+		<div class="row">
+			<div class="col-sm-12 col-xs-12 hidden-md hidden-lg" align="center" style="margin-top:5%;">
+				<input type="text" placeholder="Email address or phone number" style="width:90%;height:8%;border-radius:2px;border:1px solid;border-color:#bcc6cc;"><br>
+				<input type="text"  placeholder="Password" align="center" style="width:90%;height:8%;border-radius:2px;border:1px solid;border-color:#bcc6cc;align:center" align="center">
+				<input type="submit" style="background-color:#1F618D;color:white;border-radius:2px;border:1px solid;border-color:darkblue;width:90%;margin-top:5%;" submit value="Log In" align="center">
+				<input type="submit" style="background-color:#27AE60;color:white;border-radius:2px;border:1px solid;border-color:#27AE60;width:60%;margin-top:10%;" submit value="Create an account" align="center">
+				<a href="https://www.google.co.in/?gfe_rd=cr&ei=VcMiWNeVBaz98wfa4KaIDQ&gws_rd=ssl"><p><font style="color:#7FB3D5;font-size:10px;margin-top:10px;">Forgotten password?-Help Centre</font></a>
+			</div>
+			<div class="col-md-6 hidden-xs hidden-sm" style="margin-top:40px;">
+				<font size="4" style="color:#15317e;"><b><p style="margin-left:150px;">Connect with friends and the world around you on <br> Facebook.</b></p></font><br>
+				<div class="col-md-2">
+				</div>
+				<div class="col-md-4">
+					<img src="connection.png" width=450 height=200 style="margin-left:40px;margin-top:-20px">
+				</div>
+			</div>
+			<div class="col-md-6 hidden-xs hidden-sm">
+				<h2><b>Create an account</b></h2>
+				<font size="4"> It's free and always will be</font><br><br>
+				<div class="m">
+					<input type="text" placeholder="First Name" id="fname" title="fname" style="width:220px;height:40px;border-radius:5px;border:1px solid;border-color:#bcc6cc;">
+					<div class="first">
+					
+					<label id="fn"></label>
+					
+					</div>
+					<input type="text" placeholder="Last Name" id="lname" style="height:40px;width:230px;border-radius:5px;border:1px solid;border-color:#bcc6cc;margin-left:10px;">
+					<div class="first">
+					<label id="ln"></label>
+					</div>
+				</div>
+				<div class="m">
+				<input type="text" placeholder="Mobile Number" id="mno" style="width:464px;height:40px;border-radius:5px;border:1px solid;border-color:#bcc6cc;">
+				</div>
+				<div class="m">
+				<input type="text" placeholder="Email" id="email" style="width:464px;height:40px;border-radius:5px;border:1px solid;border-color:#bcc6cc;">
+				</div>
+				<div class="m">
+				<input type="text" placeholder="Password" id="pw" style="width:464px;height:40px;border-radius:5px;border:1px solid;border-color:#bcc6cc;"><br>
+				</div>
+				<br><h4>Birthday</h4>
+				<select style="height:30px;">
+				<option> Day</option>
+				<option> 1</option><option> 2</option><option value="3"> 3</option><option> 4</option>
+				</select>
+				<select style="height:30px;">
+				<option> Month</option>
+				<option> jan</option><option> feb</option><option> mar</option>
+				</select>
+				<select style="height:30px;">
+				<option> Year</option>
+				<option> 1992</option><option> 1993</option><option> 1994</option><option> 1995</option><br>
+				</select>
+				<div id="why">
+				<a href="https://www.google.co.in/?gfe_rd=cr&ei=VcMiWNeVBaz98wfa4KaIDQ&gws_rd=ssl"><p><h6>Why do i need to provide my<br> dirth of birth</h6></p></a><br>
+				</div>
+				<div class="m">
+				<input type="radio" name="gender" value="Male" style="background-color:#e5e4e2;"checked> Male
+				<input type="radio" name="gender" value="Female" > Female<br><br>
+				</div>
+ 				<font size="1">By clicking create an account, you agree to our <b>Terms</b> that you<br> have read our <b>Data Policy</b>, incluing our Cookie Use.</font><br><br>
+				<input type="button" style="background-color:#63a550;color:white;border-radius:5px;border:1px solid;height:30px;width:200px;font-size:20px;" submit value="Create an account" id="bt-create">
+			</div>
+		</div>
+	</div>
+</body>
+</html>
