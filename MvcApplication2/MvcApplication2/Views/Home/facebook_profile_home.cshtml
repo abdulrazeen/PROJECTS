@@ -1,0 +1,163 @@
+﻿<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style type="text/css">
+	
+	    .frow {
+		height: 53px;
+		background-color: #4867aa;
+	}
+	header{
+		background-color: 4867aa;
+		height: 16%;
+	}
+	.s {
+		background-color: #EBEDEF;
+		
+	}
+	    .brdr-r {
+	    border-right:1px solid #ccd1d1;
+        padding-left:10%;
+        }
+    
+
+	
+	    /*#Text1 {
+            width: 440px;
+            height: 23px;
+            margin-top: 9px;
+        }*/
+                .form-control-feedback {
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 2;
+        display: block;
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+        text-align: center;
+        pointer-events: none;
+        }
+                ._2yer {
+    align-items: center;
+    border-bottom: 1px solid #e9ebee;
+    display: flex;
+    padding: 12px;
+}
+	
+	</style>
+	<script type="text/javascript">
+	</script>
+</head>
+<body>
+    <header>
+        
+    <form id="form1" runat="server" class="form-horizontal">
+	<div class="container-fluid frow">
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-4" style="margin-top:4px;">
+                <div class="form-group">
+                        <input id="Text1" type="text" placeholder="Search Facebook" class="form-control"/>
+        
+                    
+                    <span class="input-grop-addon">
+                          @*<i class="glyphicon glyphicon-search form-control-feedback" style="font-size:14px;margin-right:5px;" align="center" value="1" tabindex="-1"></i>*@
+                         <i class="glyphicon glyphicon-search form-control-feedback" ></i>
+                    </span>
+                    
+                </div>
+               
+            </div>
+            <div class="col-md-2"></div>
+              
+            <div class="col-md-3">
+                <img src="../../Images/@ViewBag.file" alt="image" style="margin-left:15px;width:36px;"/>
+                  
+                  <label> @ViewBag.fname </label> 
+                  <label> @ViewBag.lname </label> 
+                
+            </div>
+                
+        </div>
+    </div>
+    <div class="container-fluid s">
+        <div class="row">
+            <div class="col-md-2">
+                
+
+                <img src="../../Images/@ViewBag.file" alt="image" style="margin-left:15px;width:36px;"/>
+                <label> @ViewBag.fname</label>
+                <label> @ViewBag.lname</label><br /><br />
+                <div class="glyphicon glyphicon-pencil"></div>
+                <label>Edit Profile</label><br />
+                 <div class="glyphicon glyphicon-pencil"></div>
+                <a href="/Home/success?fname=" + obj[0].FIRST_NAME + "&&lname=" + obj[0].LAST_NAME + "&&file=" + obj[0].image + "gfe_rd=cr&ei=VcMiWNeVBaz98wfa4KaIDQ&gws_rd=ssl"><label>Search Friend</label></a>
+                <br />
+                <div class="glyphicon glyphicon-pencil"></div>
+                <a href="http://localhost:20136/?gfe_rd=cr&ei=VcMiWNeVBaz98wfa4KaIDQ&gws_rd=ssl"><label>Approve Friends</label></a>
+
+            </div>
+          
+            <div class="col-md-6" style="margin-top:10px;background-color:white;padding-bottom:50px;" >
+                <div class="glyphicon glyphicon-pencil"></div>
+                <label>Update Status</label>&nbsp
+                  <span class="brdr-r" style="padding-left:5px;"></span>
+                <div class="glyphicon glyphicon-picture" style="padding-left:10px;"></div>
+                <label>Add Photos/Video</label>?&nbsp
+                <span class="brdr-r" style="padding-left:5px;"></span>
+                <div class="glyphicon glyphicon-align-justify" style="padding-left:10px;"></div>
+                <label>Write Note</label>
+                
+                 <label>
+                <hr />
+                </label>
+                <hr />
+                   @* <p>
+                        &nbsp;</p>
+                <font>
+                <hr />
+                </font>
+
+                    <p>
+        <img alt="" src="" />
+                </p>*@
+                
+                <textarea id="TextArea1" cols="80" name="S1" rows="2" placeholder="Whats on your mind?" style="border:none;"></textarea>
+
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-3" style="margin-top:10px;background-color:white;margin-left:20px;padding-bottom:90%;">
+
+               <font>YOUR ADS</font>
+
+               
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+
+            </div>
+            <div class="col-md-6" style="margin-top:-1030px;background-color:white;margin-bottom:200px;">
+                
+ 
+                
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+    </form>
+    </header>
+    <p>
+        <img alt="" src="" /></p>
+    </body>
+</html>

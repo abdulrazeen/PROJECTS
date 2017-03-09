@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>OwinWindowsService</id>
+    <version>1.0.0.1</version>
+    <title>OwinWindowsService</title>
+    <authors>Leo Breido</authors>
+    <owners>Leo Breido</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Adaptation of MicroService4Net (by CodeCleaner, ref. http://www.codeproject.com/Tips/894355/MicroService-Net-Create-Micro-Services-Easily-with) 
+	for using OWIN Self Host instead of ASP.NET Web Api Self Host.</description>
+    <summary>How to use :
+
+	1. Create Console application, say, MyService.exe with
+
+	class Program
+    	{
+        	static void Main(string[] args)
+        	{
+            		Action&lt;IAppBuilder&gt; startup = b =&gt;
+            		{
+                		var config = new HttpConfiguration();
+                		config.MapHttpAttributeRoutes();
+                		b.UseWebApi(config);
+                		// ..etc..
+            		};
+	    		var port = 12345; // must be &gt;= 8000
+            		var microService = new OwinMicroService(port,startup);
+            		microService.Run(args);        
+        	}
+    	}
+	2. Add a number of ApiControllers to the project. You can use the controllers in the application assembly only.
+	3. If you wish to install it as a windows service, you have to add 2 classes to the project:
+   		3.1. public class MicroServiceInstaller : ProjectInstaller { }
+   		3.2. public class MicroServiceService : InternalService { }
+
+	4.1 To run as console application : use command 'MyService.exe'
+	4.2 To install as windows service (you must be the administrator) : use command 'MyService.exe -install'
+	4.3 To uninstall : use command 'MyService.exe -uninstall'</summary>
+    <releaseNotes>See description.</releaseNotes>
+    <copyright>Copyright 2015</copyright>
+    <dependencies>
+      <dependency id="Microsoft.AspNet.WebApi.OwinSelfHost" version="5.2.3" />
+      <dependency id="Microsoft.Owin.StaticFiles" version="3.0.1" />
+    </dependencies>
+  </metadata>
+</package>

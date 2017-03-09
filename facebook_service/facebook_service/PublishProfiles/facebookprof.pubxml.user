@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\Users\Abdul Razeen\Documents\Visual Studio 2012\Projects\facebook_service\facebook_service</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/facebook_service.dll">
+      <publishTime>02/03/2017 11:54:25</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>01/10/2017 12:07:10</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.FileSystems.dll">
+      <publishTime>01/10/2017 12:07:11</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.HttpListener.dll">
+      <publishTime>01/10/2017 12:07:09</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Hosting.dll">
+      <publishTime>01/10/2017 12:07:09</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.StaticFiles.dll">
+      <publishTime>01/10/2017 12:07:10</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>01/10/2017 12:00:28</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>01/10/2017 12:07:08</publishTime>
+    </File>
+    <File Include="bin/OwinWindowsService.dll">
+      <publishTime>01/10/2017 12:07:09</publishTime>
+    </File>
+    <File Include="bin/System.Net.Http.Formatting.dll">
+      <publishTime>01/10/2017 12:07:11</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.dll">
+      <publishTime>01/10/2017 12:07:06</publishTime>
+    </File>
+    <File Include="bin/System.Web.Http.Owin.dll">
+      <publishTime>01/10/2017 12:07:05</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>01/10/2017 12:07:14</publishTime>
+    </File>
+    <File Include="Service1.svc">
+      <publishTime>01/10/2017 10:54:59</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>02/03/2017 11:54:26</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
