@@ -107,6 +107,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ServiceReference3\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -183,16 +188,32 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <None Include="Service References\ServiceReference3\Service1.disco" />
+    <None Include="Service References\ServiceReference3\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReference3\configuration.svcinfo" />
+    <None Include="Service References\ServiceReference3\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Styles\js\bootstrap-theme.css" />
+    <Content Include="Styles\js\bootstrap-theme.min.css" />
+    <Content Include="Styles\js\bootstrap.css" />
     <Content Include="Styles\js\bootstrap.js" />
+    <Content Include="Styles\js\bootstrap.min.css" />
     <Content Include="Styles\js\bootstrap.min.js" />
+    <Content Include="Styles\js\button.html" />
     <Content Include="Styles\js\face_script.js" />
     <Content Include="Styles\js\JavaScript1.js" />
     <Content Include="Styles\js\JavaScript2.js" />
     <Content Include="Styles\js\JavaScript3.js" />
     <Content Include="Styles\js\JavaScript4.js" />
     <Content Include="Styles\js\JavaScript5.js" />
+    <Content Include="Styles\js\JavaScript7.js" />
+    <Content Include="Styles\js\JavaScript8.js" />
+    <Content Include="Styles\js\Js6.js" />
     <Content Include="Styles\js\npm.js" />
     <Content Include="Styles\js\script.js" />
+    <Content Include="Styles\js\StyleSheet1.css" />
     <Content Include="Views\script2.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
@@ -230,6 +251,18 @@
       <SubType>Designer</SubType>
     </None>
     <Content Include="Views\Home\home_friend_search.cshtml" />
+    <Content Include="Views\Home\success.cshtml" />
+    <None Include="Service References\ServiceReference3\Service1.wsdl" />
+    <None Include="Service References\ServiceReference3\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReference3\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Styles\js\bootstrap-theme.css.map" />
+    <Content Include="Styles\js\bootstrap-theme.min.css.map" />
+    <Content Include="Styles\js\bootstrap.css.map" />
+    <Content Include="Styles\js\bootstrap.min.css.map" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -244,6 +277,7 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\ServiceReference1\" />
+    <WCFMetadataStorage Include="Service References\ServiceReference3\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

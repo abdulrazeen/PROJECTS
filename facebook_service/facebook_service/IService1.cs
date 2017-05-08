@@ -19,7 +19,27 @@ namespace facebook_service
         string insert_user(string first_name,string last_name,string mobile_no,string email,string password ,string gender,string dob,string image);
 
         [OperationContract]
-          string sendmail();
+          string sendmail(string email);
+
+        [OperationContract]
+        string search(string first_name, string last_name,string image);
+
+        [OperationContract]
+        string send_request(string user_one, string user_two,string action_user);
+
+        [OperationContract]
+        string accept_request(string user_one, string user_two, string action_user);
+
+        [OperationContract]
+        string show_request(string user_one);
+
+        [OperationContract]
+        string friendship(string user_one);
+
+        [OperationContract]
+        string unfriend(string user_one, string user_two, string action_user);
+
+
         // TODO: Add your service operations here
     }
 

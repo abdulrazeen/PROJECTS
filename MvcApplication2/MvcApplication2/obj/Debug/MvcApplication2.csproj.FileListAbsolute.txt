@@ -16,6 +16,6 @@ c:\users\abdul razeen\documents\visual studio 2012\Projects\MvcApplication2\MvcA
 c:\users\abdul razeen\documents\visual studio 2012\Projects\MvcApplication2\MvcApplication2\bin\System.Web.WebPages.xml
 c:\users\abdul razeen\documents\visual studio 2012\Projects\MvcApplication2\MvcApplication2\bin\System.Web.WebPages.Deployment.xml
 c:\users\abdul razeen\documents\visual studio 2012\Projects\MvcApplication2\MvcApplication2\bin\System.Web.WebPages.Razor.xml
-c:\users\abdul razeen\documents\visual studio 2012\Projects\MvcApplication2\MvcApplication2\obj\Debug\MvcApplication2.csprojResolveAssemblyReference.cache
 c:\users\abdul razeen\documents\visual studio 2012\Projects\MvcApplication2\MvcApplication2\obj\Debug\MvcApplication2.dll
 c:\users\abdul razeen\documents\visual studio 2012\Projects\MvcApplication2\MvcApplication2\obj\Debug\MvcApplication2.pdb
+C:\Users\Abdul Razeen\documents\visual studio 2012\Projects\MvcApplication2\MvcApplication2\obj\Debug\MvcApplication2.csprojResolveAssemblyReference.cache

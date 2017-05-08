@@ -6,13 +6,22 @@
 
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="../../Styles/js/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../../Styles/js/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<script src="jquery-3.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="../../Styles/js/JavaScript8.js"></script>
+ @*   <script src="../../Styles/js/JavaScript7.js"></script>*@
+
 	<style type="text/css">
 	
 	    .frow {
-		height: 53px;
+		height: 55px;
 		background-color: #4867aa;
 	}
 	header{
@@ -35,7 +44,7 @@
             height: 23px;
             margin-top: 9px;
         }*/
-                .form-control-feedback {
+                /*.form-control-feedback {
         position: absolute;
         top: 0;
         right: 0;
@@ -46,13 +55,13 @@
         line-height: 34px;
         text-align: center;
         pointer-events: none;
-        }
-                ._2yer {
+        }*/
+                /*._2yer {
     align-items: center;
     border-bottom: 1px solid #e9ebee;
     display: flex;
     padding: 12px;
-}
+}*/
 	
 	</style>
 	<script type="text/javascript">
@@ -66,26 +75,35 @@
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-4" style="margin-top:4px;">
-                <div class="form-group">
-                        <input id="Text1" type="text" placeholder="Search Facebook" class="form-control"/>
+              
+                     <input id="fname" type="text" placeholder="Search Facebook" style="width:90%;height:28px;margin-top:10px;margin-bottom:10px;margin-left:5px"/>
         
-                    
-                    <span class="input-grop-addon">
-                          @*<i class="glyphicon glyphicon-search form-control-feedback" style="font-size:14px;margin-right:5px;" align="center" value="1" tabindex="-1"></i>*@
-                         <i class="glyphicon glyphicon-search form-control-feedback" ></i>
-                    </span>
-                    
-                </div>
+            
+                    <button type="button" class="search" style="height:28px;margin-top:10px;margin-bottom:10px;margin-right:0px;">
+                    <span class="glyphicon glyphicon-search" ></span>
+                    </button>
+                   
+             
                
             </div>
             <div class="col-md-2"></div>
               
             <div class="col-md-3">
-                <img src="../../Images/@ViewBag.file" alt="image" style="margin-left:15px;width:36px;"/>
-                  
-                  <label> @ViewBag.fname </label> 
-                  <label> @ViewBag.lname </label> 
+               @* <img src="../../Images/@ViewBag.file" alt="image" style="margin-left:15px;width:36px;"/>
                 
+                  <label> @ViewBag.fname </label> 
+                  <label> @ViewBag.lname </label> *@
+                 <img src="../../Images/@Session["image"]" alt="image" style="margin-left:15px;width:36px;"/>
+                  
+               
+                  <label> @Session["tag"] </label> 
+                  <label>  @Session["tag2"] </label> 
+               
+                
+            </div>
+            <div class="col-md-2">
+                <input type="button" id="logout" value="Log out" style="background-color:#1F618D;color:white;margin-bottom:5px;border-radius:2px;border:1px solid;border-color:darkblue"/>
+               
             </div>
                 
         </div>
@@ -99,12 +117,21 @@
                 <label> @ViewBag.fname</label>
                 <label> @ViewBag.lname</label><br /><br />
                 <div class="glyphicon glyphicon-pencil"></div>
+
+
                 <label>Edit Profile</label><br />
+                 @*<a href="/Home/success?fname=" + obj[0].FIRST_NAME + "&&lname=" + obj[0].LAST_NAME + "&&file=" + obj[0].image + ""><label>Edit Profile</label></a><br />
+                 *@
                  <div class="glyphicon glyphicon-pencil"></div>
-                <a href="/Home/success?fname=" + obj[0].FIRST_NAME + "&&lname=" + obj[0].LAST_NAME + "&&file=" + obj[0].image + "gfe_rd=cr&ei=VcMiWNeVBaz98wfa4KaIDQ&gws_rd=ssl"><label>Search Friend</label></a>
-                <br />
+                
+                <a href="http://localhost:20136/Home/search" id="search_friends"><label  >Search Friend</label></a><br />
                 <div class="glyphicon glyphicon-pencil"></div>
-                <a href="http://localhost:20136/?gfe_rd=cr&ei=VcMiWNeVBaz98wfa4KaIDQ&gws_rd=ssl"><label>Approve Friends</label></a>
+                <a href="#" class="show"><label>Approve Friends</label></a>
+                <div class="glyphicon glyphicon-pencil"></div>
+                <a href="#" class="friends"><label>Friends</label></a>
+                <input type="hidden" id="username" value="@ViewBag.email" name="username" />
+                <input type="hidden" id="password" value="@ViewBag.password" />
+                 
 
             </div>
           
@@ -136,23 +163,60 @@
 
             </div>
             <div class="col-md-1"></div>
-            <div class="col-md-3" style="margin-top:10px;background-color:white;margin-left:20px;padding-bottom:90%;">
+            <div class="col-md-3" style="margin-top:10px;background-color:white;margin-left:20px;padding-bottom:70%;">
 
                <font>YOUR ADS</font>
-
-               
+                <input type="hidden" class="show" value="show" />
+                 
+                <input type="hidden" id="action_user_id" class="action_user_id" value="@Session["one"]" name="action_user_id" />
+                 <input type="hidden" id="user_one_id" class="user_one_id" value="@Session["one"]" name="user_one_id"/>
+                 
+                @* @Session["test"]
+                @Session["tag"]
+                 @Session["image"]<img src="../../Images/@Session["image"]" alt="image" style="margin-left:15px;width:36px;"/>*@
             </div>
         </div>
         <div class="row">
+      
             <div class="col-md-2">
 
             </div>
-            <div class="col-md-6" style="margin-top:-1030px;background-color:white;margin-bottom:200px;">
-                
- 
+            <div class="col-md-6" id="search" style="background-color:white;margin-top:-810px;height:900px;">
+                    
+                 @* @using (Html.BeginForm("success", "Home", FormMethod.Post))
+                        {
+                        }
+                @ViewBag.sch
+              <label> @ViewBag.name</label> 
+                <label> @ViewBag.fname</label> *@
+
+                @* <input type="hidden" id="user_two_id" value="@ViewBag.email" name="user_two_id"/>*@
                 
             </div>
-            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                  @using (Html.BeginForm("friendrequest", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+                  {
+                         
+                        <input type="hidden" class="user_one_id" value="@Session["one"]" name="user_one_id"/>
+                        <input type="hidden" class="action_user_id" value="@Session["one"]" name="action_user_id" />
+                          
+                        <input type="button" class="user_two_id" value="@Session["two"]" name="user_one_id"/>
+
+
+
+                  }
+               @* @using (Html.BeginForm("friendrequest", "Home", FormMethod.Post))
+                {
+                        <input type="hidden" class="user_one_id" value="@ViewBag.user_one" name="user_one_id"/>
+                        <input type="hidden" class="user_one_id" value="@Session["one"]" name="user_one_id"/>
+                        <input type="hidden" class="action_user_id" value="@Session["one"]" name="action_user_id" />
+                          
+                        <input type="hidden" class="user_two_id" value="@ViewBag.user_two" name="user_one_id"/>
+                }*@
+                
+                  @ViewBag.req
+                @ViewBag.user_one
+            </div>
         </div>
     </div>
     </form>

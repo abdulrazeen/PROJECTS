@@ -28,10 +28,46 @@ namespace MvcApplication2.ServiceReference1 {
         System.Threading.Tasks.Task<string> insert_userAsync(string first_name, string last_name, string mobile_no, string email, string password, string gender, string dob, string image);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/sendmail", ReplyAction="http://tempuri.org/IService1/sendmailResponse")]
-        string sendmail();
+        string sendmail(string email);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/sendmail", ReplyAction="http://tempuri.org/IService1/sendmailResponse")]
-        System.Threading.Tasks.Task<string> sendmailAsync();
+        System.Threading.Tasks.Task<string> sendmailAsync(string email);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/search", ReplyAction="http://tempuri.org/IService1/searchResponse")]
+        string search(string first_name, string last_name, string image);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/search", ReplyAction="http://tempuri.org/IService1/searchResponse")]
+        System.Threading.Tasks.Task<string> searchAsync(string first_name, string last_name, string image);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/send_request", ReplyAction="http://tempuri.org/IService1/send_requestResponse")]
+        string send_request(string user_one, string user_two, string action_user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/send_request", ReplyAction="http://tempuri.org/IService1/send_requestResponse")]
+        System.Threading.Tasks.Task<string> send_requestAsync(string user_one, string user_two, string action_user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/accept_request", ReplyAction="http://tempuri.org/IService1/accept_requestResponse")]
+        string accept_request(string user_one, string user_two, string action_user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/accept_request", ReplyAction="http://tempuri.org/IService1/accept_requestResponse")]
+        System.Threading.Tasks.Task<string> accept_requestAsync(string user_one, string user_two, string action_user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/show_request", ReplyAction="http://tempuri.org/IService1/show_requestResponse")]
+        string show_request(string user_one);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/show_request", ReplyAction="http://tempuri.org/IService1/show_requestResponse")]
+        System.Threading.Tasks.Task<string> show_requestAsync(string user_one);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/friendship", ReplyAction="http://tempuri.org/IService1/friendshipResponse")]
+        string friendship(string user_one);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/friendship", ReplyAction="http://tempuri.org/IService1/friendshipResponse")]
+        System.Threading.Tasks.Task<string> friendshipAsync(string user_one);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/unfriend", ReplyAction="http://tempuri.org/IService1/unfriendResponse")]
+        string unfriend(string user_one, string user_two, string action_user);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/unfriend", ReplyAction="http://tempuri.org/IService1/unfriendResponse")]
+        System.Threading.Tasks.Task<string> unfriendAsync(string user_one, string user_two, string action_user);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -77,12 +113,60 @@ namespace MvcApplication2.ServiceReference1 {
             return base.Channel.insert_userAsync(first_name, last_name, mobile_no, email, password, gender, dob, image);
         }
         
-        public string sendmail() {
-            return base.Channel.sendmail();
+        public string sendmail(string email) {
+            return base.Channel.sendmail(email);
         }
         
-        public System.Threading.Tasks.Task<string> sendmailAsync() {
-            return base.Channel.sendmailAsync();
+        public System.Threading.Tasks.Task<string> sendmailAsync(string email) {
+            return base.Channel.sendmailAsync(email);
+        }
+        
+        public string search(string first_name, string last_name, string image) {
+            return base.Channel.search(first_name, last_name, image);
+        }
+        
+        public System.Threading.Tasks.Task<string> searchAsync(string first_name, string last_name, string image) {
+            return base.Channel.searchAsync(first_name, last_name, image);
+        }
+        
+        public string send_request(string user_one, string user_two, string action_user) {
+            return base.Channel.send_request(user_one, user_two, action_user);
+        }
+        
+        public System.Threading.Tasks.Task<string> send_requestAsync(string user_one, string user_two, string action_user) {
+            return base.Channel.send_requestAsync(user_one, user_two, action_user);
+        }
+        
+        public string accept_request(string user_one, string user_two, string action_user) {
+            return base.Channel.accept_request(user_one, user_two, action_user);
+        }
+        
+        public System.Threading.Tasks.Task<string> accept_requestAsync(string user_one, string user_two, string action_user) {
+            return base.Channel.accept_requestAsync(user_one, user_two, action_user);
+        }
+        
+        public string show_request(string user_one) {
+            return base.Channel.show_request(user_one);
+        }
+        
+        public System.Threading.Tasks.Task<string> show_requestAsync(string user_one) {
+            return base.Channel.show_requestAsync(user_one);
+        }
+        
+        public string friendship(string user_one) {
+            return base.Channel.friendship(user_one);
+        }
+        
+        public System.Threading.Tasks.Task<string> friendshipAsync(string user_one) {
+            return base.Channel.friendshipAsync(user_one);
+        }
+        
+        public string unfriend(string user_one, string user_two, string action_user) {
+            return base.Channel.unfriend(user_one, user_two, action_user);
+        }
+        
+        public System.Threading.Tasks.Task<string> unfriendAsync(string user_one, string user_two, string action_user) {
+            return base.Channel.unfriendAsync(user_one, user_two, action_user);
         }
     }
 }

@@ -13,7 +13,14 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link href="../../Styles/js/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="../../Styles/js/bootstrap.min.css" rel="stylesheet" />
    
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    
+	<script src="jquery-3.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
     <script src="../../Styles/js/JavaScript3.js"></script>
     
    
@@ -50,16 +57,16 @@
 <body bgcolor="f3f4f9">
 	<header>
     
-    @using (Html.BeginForm("validation", "Home", FormMethod.Post))
+ @*   @using (Html.BeginForm("validation", "Home", FormMethod.Post))
     
     {
-	<div class="container-fluid frow">
+	*@<div class="container-fluid frow">
 		<div class="row">
 			<div class="col-md-6 col-md-offset-0">
                 <img src="../../Images/facebook.jpg"  width="35%" height="95%" style="margin-top:%;margin-left:20%;" align="center"  />
               
 			</div>
-
+         @*   @Session["test"]*@
 			<div class="col-md-6 hidden-xs hidden-sm">
 				<div class="col-md-4" style="margin-top:3%;">
 					<font style="color:white;font-size:12px;">Email or Phone</font><br>
@@ -81,16 +88,16 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>@*
             
   
      
-    }
+    }*@
  </header>
-     @ViewBag.username
+    @* @ViewBag.username
     @ViewBag.password
     @ViewBag.login
-	
+	*@
 
     
 	
@@ -130,13 +137,14 @@
 				<div class="m">
 				<input type="text" placeholder="Email" id="email"  name="email" style="width:464px;height:40px;border-radius:5px;border:1px solid;border-color:#bcc6cc;">
 				</div>
+                
 				<div class="m">
 				<input type="text" placeholder="Password" id="pw" name="pw" style="width:464px;height:40px;border-radius:5px;border:1px solid;border-color:#bcc6cc;"><br>
 				</div>
-
+               
               
               <input type="file" name="file" id="file" />
-                @ViewBag.file
+               
 
 				<br><h4>Birthday</h4>
 				@*<select name="day" style="height:30px;">
@@ -163,10 +171,11 @@
 				<input type="submit" style="background-color:#63a550;color:white;border-radius:5px;border:1px solid;height:30px;width:200px;font-size:20px;" submit value="Create an account" id="bt-create">
 			</div>
              }
+        
              @* @ViewBag.fname
-    @ViewBag.lname
-            @ViewBag.email
-    @ViewBag.dob*@
+    
+            @ViewBag.email*@
+   
     @ViewBag.create
 		</div>
 	</div>

@@ -22,3 +22,4 @@ c:\users\abdul razeen\documents\visual studio 2012\Projects\facebook_service\fac
 c:\users\abdul razeen\documents\visual studio 2012\Projects\facebook_service\facebook_service\bin\System.Web.Http.Owin.xml
 c:\users\abdul razeen\documents\visual studio 2012\Projects\facebook_service\facebook_service\obj\Release\facebook_service.dll
 c:\users\abdul razeen\documents\visual studio 2012\Projects\facebook_service\facebook_service\obj\Release\facebook_service.pdb
+C:\Users\Abdul Razeen\documents\visual studio 2012\Projects\facebook_service\facebook_service\obj\Release\facebook_service.csprojResolveAssemblyReference.cache

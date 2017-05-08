@@ -1,0 +1,177 @@
+﻿
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <title></title>
+
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   
+    <script src="../../Styles/js/JavaScript3.js"></script>
+    
+   
+	<style type="text/css">
+	
+	.frow {
+		height: 15%;
+		background-color: #4867aa;
+	}
+	header{
+		background-color: #4867aa;
+		height: 16%;
+	}
+	.s {
+		background: linear-gradient(white,#d3d8e8);
+		
+	}
+	.m{
+		margin-top: 10px;
+		margin-right: -20px;
+
+	}
+	#why{
+		margin-left: 200px;
+		margin-top: -40px;
+	}
+	
+	
+	</style>
+	<script type="text/javascript">
+	</script>
+    
+</head>
+<body bgcolor="f3f4f9">
+	<header>
+    
+ @*   @using (Html.BeginForm("validation", "Home", FormMethod.Post))
+    
+    {
+	*@<div class="container-fluid frow">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-0">
+                <img src="../../Images/facebook.jpg"  width="35%" height="95%" style="margin-top:%;margin-left:20%;" align="center"  />
+              
+			</div>
+            @Session["test"]
+			<div class="col-md-6 hidden-xs hidden-sm">
+				<div class="col-md-4" style="margin-top:3%;">
+					<font style="color:white;font-size:12px;">Email or Phone</font><br>
+					<a href="#" data-toggle="tooltip" title="mail">
+				     <input type="text" id="username" name="username"/>
+					
+				</div>
+				<div class="col-md-4 hidden-xs hidden-sm" style="margin-top:3%;">
+					<font style="color:white;font-size:12px;">Password  </font><br> 
+                    <input type="text" id="password" name="password" title="password"/>
+					
+					<a href="https://www.google.co.in/?gfe_rd=cr&ei=VcMiWNeVBaz98wfa4KaIDQ&gws_rd=ssl"><p><font style="color:lightblue;font-size:12px;">Forgotten account?</font></a>
+				</div>
+				<div class="col-md-4 hidden-xs hidden-sm" style="margin-top:6%">
+					<input type="submit" id="Button1" value="Log in" style="background-color:#1F618D;color:white;border-radius:2px;border:1px solid;border-color:darkblue"/>
+				</div>
+				<div class="col-sm-12 col-md-offset-0 col-xs-12 hidden-md hidden-lg">
+					<img src="~/Images/facebook.jpg" width="35%" height="85%" style="margin-top:-10%;margin-left:20%;" align="center"/>
+				</div>
+			</div>
+		</div>
+	</div>@*
+            
+  
+     
+    }*@
+ </header>
+    @* @ViewBag.username
+    @ViewBag.password
+    @ViewBag.login
+	*@
+
+    
+	
+	<div class="container-fluid s">
+
+		<div class="row">
+			<div class="col-sm-12 col-xs-12 hidden-md hidden-lg" align="center" style="margin-top:5%;">
+				<input type="text" placeholder="Email address or phone number" style="width:90%;height:8%;border-radius:2px;border:1px solid;border-color:#bcc6cc;"><br>
+				<input type="text"  placeholder="Password" align="center" style="width:90%;height:8%;border-radius:2px;border:1px solid;border-color:#bcc6cc;align:center" align="center">
+				<input type="submit" style="background-color:#1F618D;color:white;border-radius:2px;border:1px solid;border-color:darkblue;width:90%;margin-top:5%;" submit value="Log In" align="center">
+				<input type="submit" style="background-color:#27AE60;color:white;border-radius:2px;border:1px solid;border-color:#27AE60;width:60%;margin-top:10%;" submit value="Create an account" align="center">
+				<a href="https://www.google.co.in/?gfe_rd=cr&ei=VcMiWNeVBaz98wfa4KaIDQ&gws_rd=ssl"><p><font style="color:#7FB3D5;font-size:10px;margin-top:10px;">Forgotten password?-Help Centre</font></a>
+			</div>
+			<div class="col-md-6 hidden-xs hidden-sm" style="margin-top:40px;">
+				<font size="4" style="color:#15317e;"><b><p style="margin-left:150px;">Connect with friends and the world around you on <br> Facebook.</b></p></font><br>
+				<div class="col-md-2">
+				</div>
+				<div class="col-md-4">
+                    <img src="../../Images/connection.png" width=450 height=200 style="margin-left:40px;margin-top:-20px"/>
+					 
+				</div>
+			</div>
+
+             @using (Html.BeginForm("create", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+     {
+			<div class="col-md-6 hidden-xs hidden-sm">
+				<h2><b>Create an account</b></h2>
+				<font size="4"> It's free and always will be</font><br><br>
+				<div class="m">
+					<input type="text" placeholder="First Name"  id="fname" name="fname" title="fname" style="width:220px;height:40px;border-radius:5px;border:1px solid;border-color:#bcc6cc;">
+					<label id="fn"></label>
+					<input type="text" placeholder="Last Name" id="lname" name="lname" style="height:40px;width:227px;border-radius:5px;border:1px solid;border-color:#bcc6cc;margin-left:10px;">
+				</div>
+				<div class="m">
+				<input type="text" placeholder="Mobile Number" id="mno" name="mno" style="width:464px;height:40px;border-radius:5px;border:1px solid;border-color:#bcc6cc;">
+				</div>
+				<div class="m">
+				<input type="text" placeholder="Email" id="email"  name="email" style="width:464px;height:40px;border-radius:5px;border:1px solid;border-color:#bcc6cc;">
+				</div>
+				<div class="m">
+				<input type="text" placeholder="Password" id="pw" name="pw" style="width:464px;height:40px;border-radius:5px;border:1px solid;border-color:#bcc6cc;"><br>
+				</div>
+
+              
+              <input type="file" name="file" id="file" />
+                @ViewBag.file
+
+				<br><h4>Birthday</h4>
+				@*<select name="day" style="height:30px;">
+				<option> Day</option>
+				<option> 1</option><option> 2</option><option value="3"> 3</option><option> 4</option>
+				</select>
+				<select name="month" style="height:30px;">
+				<option> Month</option>
+				<option> 1</option><option> 2</option><option> 3</option><option> 4</option>
+				</select>
+				<select name="year" style="height:30px;">
+				<option> Year</option>
+				<option> 1992</option><option> 1993</option><option> 1994</option><option> 1995</option><br>
+				</select>*@
+                <input type="date"  name="dob"/>
+				<div id="why">
+				<a href="https://www.google.co.in/?gfe_rd=cr&ei=VcMiWNeVBaz98wfa4KaIDQ&gws_rd=ssl"><p><h6>Why do i need to provide my<br> dirth of birth</h6></p></a><br>
+				</div>
+				<div class="m">
+				<input type="radio" name="gender" value="Male" style="background-color:#e5e4e2;"checked> Male
+				<input type="radio" name="gender" value="Female" > Female<br><br>
+				</div>
+ 				<font size="1">By clicking create an account, you agree to our <b>Terms</b> that you<br> have read our <b>Data Policy</b>, incluing our Cookie Use.</font><br><br>
+				<input type="submit" style="background-color:#63a550;color:white;border-radius:5px;border:1px solid;height:30px;width:200px;font-size:20px;" submit value="Create an account" id="bt-create">
+			</div>
+             }
+             @* @ViewBag.fname
+    @ViewBag.lname
+            @ViewBag.email
+    @ViewBag.dob*@
+    @ViewBag.create
+		</div>
+	</div>
+        
+     
+        
+</body>
+</html>
